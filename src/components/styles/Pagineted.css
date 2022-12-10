@@ -1,0 +1,23 @@
+:root{
+    --principal:#FF4081;
+}
+
+.pagineted-container {
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.pagineted-a{
+    color: white;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 0 4px;
+    background-color: #009d71;
+}
+
+.pagineted-a:hover {
+    background-color: #038554;
+    cursor: pointer;
+}

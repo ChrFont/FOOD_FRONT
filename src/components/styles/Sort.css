@@ -1,0 +1,55 @@
+.sort-wrap {
+    display: block;
+    width: fit-content;
+    margin: 0;
+    
+}
+
+.order {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.sort-container { 
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ah-container {
+    margin: 0 auto;
+
+}
+.ah-container div{
+    margin: 5px auto;
+    color: black;
+    font-weight:900;
+    box-shadow: 10px red;
+}
+.sort-button {
+    margin: 0 3px;
+    width: 40px;
+    height: 36px;
+    border: 1px solid #2196f3;
+    background: #2196f3;
+    text-align: center;
+    color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.sort-container select {
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    border: 1px solid black;
+    margin: 1px auto;
+    font-size: 16px;
+    width: 100%;
+    border: 3px solid #2196f3;
+    height: 25px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}

@@ -1,0 +1,24 @@
+* {
+    font-family: sans-serif;
+}
+
+
+.nav-container {
+    display: block;
+    width: 100%;
+    position: fixed;
+
+}
+.nav-container h3 {
+    color: white;
+    text-align: start;
+    margin: 1em 1em;
+    padding: 0 2em;
+    width: min-content;
+    vertical-align: middle;
+    font-weight: 900;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-bottom: 2px solid blanchedalmond;
+    border-radius: 10px;
+    text-shadow: 1px 1px;
+}
