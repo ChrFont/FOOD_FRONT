@@ -22,7 +22,7 @@ function rootReducer(state = initialState, action){
             }
         case "SEARCH_RECIPE":
             console.log(action.payload);
-            if(action.payload.length == 0){
+            if(action.payload.length === 0){
                 alert("No existe la receta")
             }else{
                 return{

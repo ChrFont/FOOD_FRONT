@@ -1,18 +1,16 @@
-* {
-    text-decoration: none;
-}
-.container-create{
+.container-create {
     border: 1px solid black;
     width: fit-content;
     height: min-content;
     margin: 5px auto;
     background: #009d71;
 }
+
 .container-create p {
     color: white;
 }
+
 .fs-container {
     display: flex;
     justify-content: center;
 }
-

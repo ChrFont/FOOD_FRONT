@@ -1,13 +1,9 @@
-:root{
-    --principal:#FF4081;
-}
-
 .pagineted-container {
     display: inline-block;
     margin: 5px 0;
 }
 
-.pagineted-a{
+.pagineted-a {
     color: white;
     float: left;
     padding: 8px 16px;

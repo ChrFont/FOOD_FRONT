@@ -103,17 +103,17 @@ export default function Form(){
         let errores = {}
         if(datos.name){
             if(validName(datos.name)) errores.name ="El nombre debe contener entre 4 y 20 caracteres"
-        }else if (datos.name == "") {
+        }else if (datos.name === "") {
             setBoton(true)
         }
         if(datos.summary){
             if(validSummary(datos.summary)) errores.summary = "La descripcion debe contener entre 5 y 20 palabras"
-        }else if (datos.summary == "") {
+        }else if (datos.summary === "") {
             setBoton(true)
         }
         if(datos.healthScore){
             if(validHealtScore(datos.healthScore)) errores.healthScore = "El puntaje debe estar entre 0 y 100"
-        }else if (datos.healthScore == "") {
+        }else if (datos.healthScore === "") {
             setBoton(true)
         }
         return errores

@@ -2,7 +2,7 @@ import axios from "axios"
 
 export function getRecipes(){
     return async function(dispatch){
-        let json = await axios.get("http://localhost:3001/recipes")
+        let json = await axios.get(`${process.env.REACT_APP_NEXT_PUBLIC_QUERIES}/recipes`)
         return dispatch({
             type: "GET_RECIPES",
             payload: json.data
@@ -12,7 +12,7 @@ export function getRecipes(){
 
 export function getDiets(){
     return async function(dispatch){
-        let json = await axios.get("http://localhost:3001/diets")
+        let json = await axios.get(`${process.env.REACT_APP_NEXT_PUBLIC_QUERIES}/diets`)
         return dispatch({
             type: "GET_DIETS",
             payload: json.data
@@ -20,7 +20,7 @@ export function getDiets(){
     }
 }
 
-export function filterRecipesByDiet(payload){ //diet
+export function filterRecipesByDiet(payload){
     return {
         type: "FILTER_BY_DIET",
         payload
@@ -44,7 +44,7 @@ export function orderByHealthScore(payload){
 
 export function searchRecipe(name){
     return async function(dispatch){
-        let json = await axios.get("http://localhost:3001/recipes?name=" + name)
+        let json = await axios.get(`${process.env.REACT_APP_NEXT_PUBLIC_QUERIES}/recipes?name=${name}`)
         return dispatch({
             type: "SEARCH_RECIPE",
             payload: json.data
@@ -60,7 +60,7 @@ export function getDetail(id){
         }
     }
     return async function(dispatch){
-        let json = await axios.get("http://localhost:3001/recipes/" + id)
+        let json = await axios.get(`${process.env.REACT_APP_NEXT_PUBLIC_QUERIES}/recipes/${id}`)
         return dispatch({
             type: "GET_DETAIL",
             payload: json.data
@@ -71,7 +71,7 @@ export function getDetail(id){
 export function postRecipe(payload){ // objeto del formulario con los datos
     console.log(payload);
     return async function(dispatch){
-        let json = await axios.post("http://localhost:3001/recipes", payload)
+        let json = await axios.post(`${process.env.REACT_APP_NEXT_PUBLIC_QUERIES}/recipes`, payload)
         alert("receta creada")
         return dispatch({
             type: "POST_RECIPE",
