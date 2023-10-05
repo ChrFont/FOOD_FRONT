@@ -15,6 +15,7 @@ export default function Home() {
     const recipes = useSelector((state) => state.filterRecipes)
     const [currentPage, setCurrentPage] = useState(1)
     const [order, setOrder] = useState("")
+    const [filterVisibility, setFilterVisibility] = useState(false)
     useEffect(() => {
         dispatch(getRecipes())
         dispatch(getDiets())
@@ -38,28 +39,30 @@ export default function Home() {
         setCurrentPage(pageNumber)
     }
     const handleOrder = (order) => {
-        console.log(order.value)
-        if (order.id === "alphabet") {
-            dispatch(orderByAlphabet(order.value))
+        console.log(order)
+        if (order === "a-z" || order === "z-a") {
+            dispatch(orderByAlphabet(order))
         } else {
-            dispatch(orderByHealthScore(order.value))
+            dispatch(orderByHealthScore(order))
         }
-        setOrder(order.value)
+        setOrder(order)
     }
 
     return (
-        <div >
-            <div className="container-img"></div>
+        <div className="container__home">
             <h1>HealthyEats</h1>
-            <div className="container-create">
-                <Link to="/form">
-                    <p>Create Recipe</p>
-                </Link>
+            <div className="container__buttons">
+                <div className="home__button">
+                    <Link to="/form">
+                        <p>Add Recipe</p>
+                    </Link>
+                </div>
+                <div className="home__button" onClick={() => setFilterVisibility(!filterVisibility)}>
+                    <p>Filters</p>
+                </div>
             </div>
-            <div className="fs-container">
-                <Sort handle={handleOrder}></Sort>
-                <Filter handle={handleFilter}></Filter>
-            </div>
+            {filterVisibility ? <Sort handle={handleOrder}></Sort> : null}
+            {filterVisibility ? <Filter handle={handleFilter}></Filter> : null}
             <SearchBar></SearchBar>
             <Pagineted
                 recipesPerPage={recipesPerPage}

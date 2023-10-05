@@ -1,22 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles/Sort.css"
 
-export default function Sort({handle}){
-   
+export default function Sort({ handle }) {
+    const [alphabet, setAlphabet] = useState(true)
+    const [healthScore, setHealthScore] = useState(true) //menor-mayor
 
-    return(
-        <div className="sort-wrap">
-            <div className="sort-container">
-                <h3 className="order">Order by</h3>
-                <select onChange={e => handle(e.target)} id="alphabet">
-                        <option value="a-z">A-Z</option>
-                        <option value="z-a">Z-A</option>
-                </select>
-                <select onChange={e => handle(e.target)} id="healthScore">
-                    <option value="menor-mayor">Menor-Mayor</option>
-                    <option value="mayor-menor">Mayor-Menor</option>
-                </select>
+    const handleChange = (order) => {
+        if (order === "alphabet") {
+            setAlphabet(!alphabet)
+            alphabet ? handle("a-z") : handle("z-a")
+        } else if (order === "healthScore") {
+            setHealthScore(!healthScore)
+            healthScore ? handle("menor-mayor") : handle("mayor-menor")
+        }
+    }
+    return (
+        <div className="container__sort">
+            <p className="sort__title">Order:</p>
+            <div onClick={() => handleChange("alphabet")}>
+                {alphabet ? <p>Z-A</p> : <p>A-Z</p>}
+
             </div>
+            <div onClick={() => handleChange("healthScore")}>
+                {healthScore ? <p>100-0</p> : <p>0-100</p>}
+            </div>
+
         </div>
     )
 }

@@ -1,25 +1,27 @@
-
-.filter-wrap {
-    display: block;
-    width: fit-content;
-    margin: 0;
+.container__filter {
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 300px;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Jua', sans-serif;
+    font-size: 24px;
 }
 
-.filter-container select{
-    outline: 0;
-    border: 0;
-    box-shadow: none;
-    border: 1px solid black;
-    margin: 1px auto;
-    font-size: 16px;
-    width: 100%;
-    border: 3px solid #2196f3;
-    height: 25px;
-    border-radius: 5px 0 0 5px;
-    outline: none;
+.filter__title {
+    padding: 5px 10px;
 }
 
-.filter-container h3{
+.container__filter select {
     width: 100%;
-    margin: 10px 0;
+    margin: 5px 10px;
+    border: none;
+    font-family: 'Jua', sans-serif;
+    font-size: 20px;
+    color: #514F4F;
 }
