@@ -69,7 +69,7 @@ export default function Home() {
                 allRecipes={recipes.length}
                 paginado={paginado}
             />
-            <div><Cards currentRecipes={currentRecipes} /></div>
+            <Cards currentRecipes={currentRecipes} />
         </div>
     )
 }

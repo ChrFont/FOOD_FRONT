@@ -1,33 +1,31 @@
 .card-header img  {
+    position:relative;
     width: 100%;
-    height: 200px;
+    height: 100%;
+    z-index: 1;
     object-fit: cover;
 }
 .card-header{
-    background-color: #009d71;
+    
 }
 
 .card-body {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    height: 100%;
-    background-color: #009d71;
-    color: white;
+    color: #B3FF85;
     margin: 0 auto;
+    z-index: 10;
 }
 .card-body h3 {
     margin: 0 auto;
 }
 
 .diets-container {
-    display: inline-block;
+    
     margin: 5px auto;
     width: 100%;
 }
 
 .diets-container p {
-    display: inline-block;
+   
     margin: 1px auto;
     width: 100%;
 }
