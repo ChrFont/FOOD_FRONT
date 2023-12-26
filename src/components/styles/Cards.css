@@ -3,8 +3,17 @@
 
 .cards-container {
     display: flex;
-    width: 1040px;
+    max-width: 80%;
+    margin: 0 auto;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
+@media (width >= 1280px) {
+    .cards-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+  }

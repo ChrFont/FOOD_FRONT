@@ -11,7 +11,7 @@ export default function Cards({ currentRecipes }) {
             {
                 currentRecipes.length > 0 ? currentRecipes.map(e =>
                 (
-                    <Card key={e.id} id={e.id} img={e.image} name={e.name} diets={e.diets}></Card>
+                    <Card id={e.id} img={e.image} name={e.name} diets={e.diets}></Card>
 
                 )) : false
             }

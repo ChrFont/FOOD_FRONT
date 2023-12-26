@@ -1,23 +1,26 @@
 .pagineted-container {
    display: flex;
-   place-content: center;
-   margin: 16px 0;
+   place-content: space-between;
+   margin: 10px auto;
+   flex-wrap: wrap;
+   max-width: 290px
 }
 
 .pagineted-a {
     background-color: white;
-    padding: 5px 10px;
+    padding: 5px 5px;
     border-right: 1px solid;
     font-weight: 600;
     font-family: var(--font2);
+    cursor: pointer;
 }
 
-.pagineted-container a:first-child{
+.pagineted-container span:first-child{
     border-top-left-radius:10px;
     border-bottom-left-radius:10px;
 }
 
-.pagineted-container a:last-child{
+.pagineted-container span:last-child{
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     border: 0;
