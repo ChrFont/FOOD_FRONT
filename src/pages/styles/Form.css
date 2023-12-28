@@ -1,0 +1,71 @@
+.form-container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  place-content: center;
+}
+body{
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 161, 155, 0.84) 51.49%, #FF4438 102.97%), #FFF;
+}
+.form-container h1{
+  font-size: 48px;
+  font-family: var(--font);
+  color: #FFEE51;
+  font-weight: 400;
+  text-shadow: none;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.815);
+}
+.form-container form{
+  margin: 16px;
+}
+.form-container form input{
+  width: 90%;
+}
+.labels-container{
+  display: grid;
+  grid-template-areas: "name steps"
+                       "diets steps"
+                       "diets steps"
+                       "diets steps"
+                       "score steps"
+                       "summary summary"
+                       "summary summary"
+                       "summary summary";
+
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(8, 1fr);
+  min-height: 600px;
+  font-family: var(--font2);
+}
+
+.item-1 {
+   grid-area: name;
+}
+.item-2 {
+   grid-area: steps;
+}
+.item-3 {
+   grid-area: diets;
+}
+.item-3 select{
+  width: 90%;
+}
+.item-4 {
+   grid-area: score;
+   }
+.item-5 {
+   grid-area: summary;
+   }
+
+   .item-5 textarea{
+    width: 100%;
+   }
+
+
+   
+@media (width >= 1280px) {
+  .form-container{
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
