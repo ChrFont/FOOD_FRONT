@@ -8,6 +8,10 @@ Es una aplicación en la cual se puedan ver distintas recetas de comida junto co
 - Filtrarlos / Ordenarlos
 - Crear nuevas recetas propias
 
+## Link deploy del proyecto
+
+https://food-front-hz4hwzza3-chrfont.vercel.app
+
 ## Tecnologías Utilizadas
 
 - Frontend: React, Redux
