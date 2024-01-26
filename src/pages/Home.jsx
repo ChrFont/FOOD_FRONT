@@ -69,7 +69,8 @@ export default function Home() {
                 allRecipes={recipes.length}
                 paginado={paginado}
             />
-            <Cards currentRecipes={currentRecipes} />
+            {currentRecipes.length ? <Cards currentRecipes={currentRecipes} /> :
+                <p>Loading</p>}
         </div>
     )
 }
